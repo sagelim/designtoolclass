@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Tool Class</title>
+<meta name="description" content="기초 디자인 툴 사용부터 AI 활용 방법, 포트폴리오 결과물까지">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sagelim.github.io/designtoolclass/">
+<meta property="og:title" content="Design Tool Class">
+<meta property="og:description" content="기초 디자인 툴 사용부터 AI 활용 방법, 포트폴리오 결과물까지">
+<meta property="og:image" content="https://sagelim.github.io/designtoolclass/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:#fff;color:#1F2129;
+  font-family:"Pretendard",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  font-size:15px;line-height:1.7;letter-spacing:-0.01em;
+  word-break:keep-all;-webkit-font-smoothing:antialiased;
+}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.banner{display:block;width:100%;height:auto;background:#222}
+
+main{max-width:708px;margin:0 auto;padding:16px 24px 96px}
+section{padding:56px 0}
+section+section{border-top:1px solid #EEEFF1}
+
+.tag{display:inline-block;margin:0 0 12px;padding:3px 10px;border-radius:4px;
+  background:#1F2129;color:#fff;font-size:13px;line-height:1.5;font-weight:500;letter-spacing:-0.01em}
+h2,.h2{margin:0 0 28px;font-size:26px;line-height:1.4;font-weight:700;letter-spacing:-0.02em;color:#1F2129}
+h3{margin:32px 0 6px;font-size:16px;line-height:1.5;font-weight:600;letter-spacing:-0.01em;color:#1F2129}
+h3 small{margin-left:8px;font-size:14px;font-weight:400;color:#8B8E96}
+h4{margin:16px 0 4px;font-size:15px;line-height:1.6;font-weight:600;color:#1F2129}
+h2+h3{margin-top:0}
+p{margin:0 0 4px;color:#6B6E76}
+ul,ol{margin:0;padding-left:1.3em;color:#6B6E76}
+strong{color:#1F2129;font-weight:600}
+li{padding:2px 0}
+li::marker{color:#B4B7BD}
+.note{margin:12px 0 0;font-size:13px;line-height:1.6;color:#9A9DA4}
+
+.rows{list-style:none;padding:0;margin:0}
+.rows li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 16px;padding:14px 0;border-bottom:1px solid #EEEFF1}
+.rows li:first-child{padding-top:0}
+.rows li:last-child{border-bottom:0;padding-bottom:0}
+.rows .k{color:#1F2129;font-weight:600}
+.rows .v{color:#6B6E76}
+
+
+@media (max-width:600px){
+  section{padding:44px 0}
+  h2{font-size:22px}
+}
+
+.flow{list-style:none;margin:0 0 8px;padding:0;display:flex;align-items:stretch;gap:8px}
+.flow li{flex:1 1 0;min-width:0;padding:16px 14px;border:1px solid #E3E4E7;border-radius:4px}
+.flow li.arrow{flex:none;display:flex;align-items:center;padding:0;border:0;color:#B4B7BD}
+.flow .n{display:block;font-size:12px;line-height:1.5;color:#8B8E96;font-variant-numeric:tabular-nums}
+.flow .t{display:block;margin-top:2px;font-size:15px;line-height:1.7;font-weight:400;color:#6B6E76}
+.flow .s{display:block;font-size:13px;line-height:1.5;color:#6B6E76}
+h3 .n{margin-right:8px;color:#B4B7BD;font-weight:500;font-variant-numeric:tabular-nums}
+.rows .v small{display:block;font-size:13px;color:#9A9DA4;text-align:right}
+@media (max-width:600px){
+  .flow{flex-direction:column}
+  .flow li.arrow{justify-content:center;transform:rotate(90deg);height:16px}
+}
+
+.step{margin-top:36px}
+.eyebrow{display:block;margin:0 0 2px;font-size:12px;line-height:1.5;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:#9A9DA4}
+.step h3{margin:0 0 8px}
+.flow li{text-align:center;padding:8px 10px}
+.flow .t{margin-top:0}
+h1.h2+p{margin-top:-20px}
+.tools{list-style:none;margin:0 0 16px;padding:0;display:flex;gap:8px}
+.tools li{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;padding:8px 10px;border:1px solid #E3E4E7;border-radius:4px;text-align:center;font-size:15px;line-height:1.7;color:#6B6E76}
+.m-br{display:none}
+@media (max-width:600px){
+  .m-br{display:inline}
+  .rows .v{margin-left:auto;text-align:right}
+  .m-sub{display:block}
+}
+</style>
+</head>
+<body>
+<header>
+<img class="banner" src="banner.jpg" alt="DESIGN TOOL CLASS — Adobe CC / Figma / AI">
+</header>
+
+<main>
+<section>
+<span class="tag">Hello</span>
+<h1 class="h2">Design Tool Class</h1>
+<p>기초 디자인 툴 사용부터 AI 활용 방법, 포트폴리오 결과물까지!</p>
+</section>
+
+<section>
+<span class="tag">Who</span>
+<h2>모든 디자인 입문자를 위한 수업입니다</h2>
+<ul>
+<li>입학 전 디자인 툴을 미리 공부하고 싶은<br class="m-br"> <strong>디자인학과 새내기</strong></li>
+<li>업무 소통을 위해 디자인, 협업 툴을 배우고 싶은<br class="m-br"> <strong>직장인</strong></li>
+<li>동아리, 대외활동에 필요한 포트폴리오를 만들고 싶은<br class="m-br"> <strong>대학생</strong></li>
+<li>홍보물을 직접 만들고 싶은<br class="m-br"> <strong>1인 사업자</strong></li>
+</ul>
+</section>
+
+<section>
+<span class="tag">Tutor</span>
+<h2>안녕하세요,<br>과외를 진행할 세이지입니다</h2>
+<ul class="rows">
+<li><span class="k">홍익대학교 디자인컨버전스학부</span><span class="v">학사</span></li>
+<li><span class="k">Kakaobank · Brand Design Intern</span><span class="v">판교, 대한민국</span></li>
+<li><span class="k">Tigris Design · Brand Design Intern</span><span class="v">시티홀, 싱가포르</span></li>
+</ul>
+</section>
+
+<section>
+<span class="tag">How</span>
+<h2>이렇게 수업합니다</h2>
+<ul>
+<li>미대에 막 입학했을 때 겪었던 툴 사용의 어려움을 누구보다 잘 알고 있습니다. 그래서 <strong>기초부터 차근차근</strong>, <strong>언제든지 편하게 질문</strong>할 수 있는 분위기로 수업을 진행합니다.</li>
+<li>디자인을 꿈꾸고 있는 대학생분들이라면 <strong>소모임, 동아리, 대기업 서포터즈, 산학, 학부연구생, 국내외 공모전 수상, 대기업, 해외 인턴</strong>까지 다양한 대학 활동을 해온 경험을 바탕으로 고민 중이신 이야기도 같이 나누겠습니다.</li>
+<li>단순한 툴 사용법을 넘어, 나만의 미감을 찾고 <strong>디자인 감각</strong>을 키우는 방법까지 함께 알려드립니다.</li>
+<li>툴 안의 <strong>AI 기능</strong>도 자연스럽게 활용할 수 있도록 수업을 구성했습니다.</li>
+<li>수업은 <strong>비대면 미팅</strong>으로 진행합니다.</li>
+</ul>
+</section>
+
+<section>
+<span class="tag">Curriculum</span>
+<h2>이렇게 진행합니다</h2>
+
+<ol class="flow" aria-label="수업 흐름">
+<li><span class="t">수업 준비</span></li>
+<li class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></li>
+<li><span class="t">수업</span></li>
+<li class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></li>
+<li><span class="t">실습</span></li>
+<li class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></li>
+<li><span class="t">포트폴리오</span></li>
+</ol>
+
+<div class="step">
+<h3>수업 준비</h3>
+<ul>
+<li>프로그램 설치</li>
+<li>나의 미감, 디자인 취향 찾기 (레퍼런스 사이트, 상업용 폰트 사이트, 상업용 이미지 사이트 공유)</li>
+</ul>
+<p class="note">*자신의 디자인 취향을 살펴보며 앞으로 만들고 싶은 작업물의 방향을 찾고, 의욕을 높일 수 있습니다. 보내주신 보드에 맞춰 이후 수업을 준비합니다.</p>
+</div>
+
+<div class="step">
+<h3>수업</h3>
+<ul class="tools" aria-label="사용 툴">
+<li>Adobe Photoshop</li>
+<li>Adobe Illustrator</li>
+<li>Figma</li>
+</ul>
+<ul>
+<li>기초 인터페이스 및 단축키 익히기</li>
+<li>실무에서 자주 사용하는 기본 툴 안내</li>
+<li>실습을 통한 툴 복습</li>
+</ul>
+<p class="note">*원하시는 툴에 맞춰 커리큘럼을 구성하며 GPT, Gemini, Claude와 같은 AI 툴을 함께 사용합니다.</p>
+</div>
+
+<div class="step">
+<h3>실습</h3>
+<ul>
+<li>스티커 굿즈 제작</li>
+<li>명함 제작</li>
+<li>썸네일, 카드 뉴스 제작</li>
+<li>브랜드 로고 제작</li>
+<li>2027 달력 포스터 제작</li>
+</ul>
+<p class="note">*원하시는 작업물이 따로 있다면, 그에 맞춰 수업을 준비해 드립니다.</p>
+</div>
+
+<div class="step">
+<h3>포트폴리오</h3>
+<ul>
+<li>만들어 온 작업물을 바탕으로 목업 실습<br class="m-br"> (목업 사이트 공유)</li>
+<li>미니 포트폴리오 제작</li>
+</ul>
+</div>
+</section>
+
+<section>
+<span class="tag">Info</span>
+<h2>수업 안내</h2>
+<ul class="rows">
+<li><span class="k">횟수</span><span class="v">주 1회, 총 6회</span></li>
+<li><span class="k">수업 시간</span><span class="v">회당 1시간 30분</span></li>
+<li><span class="k">요일</span><span class="v">금·토·일 중 조정</span></li>
+<li><span class="k">질의응답</span><span class="v">수업 시간 외에도 자유롭게 진행</span></li>
+<li><span class="k">결과물</span><span class="v">5개의 작업물 + 포트폴리오</span></li>
+</ul>
+</section>
+
+<section>
+<span class="tag">Notice</span>
+<h2>환불 안내</h2>
+<ul class="rows">
+<li><span class="k">수업 시작 1~2일 전</span><span class="v">70% 환불<span class="m-sub"> (수업 준비 비용이 반영됩니다.)</span></span></li>
+<li><span class="k">수업 시작 후 7일 이내</span><span class="v">수강한 주차 차감 후 환불</span></li>
+<li><span class="k">1주차 이후</span><span class="v">환불 불가</span></li>
+</ul>
+</section>
+</main>
+
+</body>
+</html>
